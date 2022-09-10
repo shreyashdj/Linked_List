@@ -15,7 +15,7 @@ public class LinkedListMain {
 		list.addEnd(30);
 		list.addEnd(70);
 		
-		list.deleteFirst();
+		list.deleteEnd();
 		
 		list.display();
 	}

@@ -120,5 +120,28 @@ public class LinkedList {
 			head = head.next;
 		}
 	}
+
+	/*
+	 * 	method to Delete Last element of Linked List
+	 */
+	
+	public void deleteEnd() {
+		
+		if (head == null) {
+			
+			System.out.println("\n LinkedList is empty");
+			
+		} else {
+			
+			Node temp = head;
+			while (temp.next != tail) {
+				
+	    		temp = temp.next;
+	    	}
+			tail = temp;
+			tail.next = null;
+		}
+		
+	}
 	
 }
