@@ -10,10 +10,10 @@ public class LinkedListMain {
 		System.out.println("\n Welcome to Linked List Program");
 		
 		LinkedList list = new LinkedList();		// created object of LinkedList class
-
-		list.addFirst(70);
-		list.addFirst(30);
-		list.addFirst(56);
+		
+		list.addEnd(56);
+		list.addEnd(30);
+		list.addEnd(70);
 		
 		list.display();
 	}
