@@ -5,6 +5,10 @@ package com.bridgelabz.linkedList;
  */
 public class Node {
 	
+	/*
+	 * 	Node creation
+	 */
+	
 	// variables
 	
 	int data;
