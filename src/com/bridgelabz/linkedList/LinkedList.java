@@ -104,5 +104,21 @@ public class LinkedList {
 		}
 
 	}
+
+	/*
+	 * 	method to Delete First element of Linked List
+	 */
+	
+	public void deleteFirst() {
+		
+		if (head == null) {
+			
+			System.out.println("\n LinkedList is empty");
+			
+		} else {
+			
+			head = head.next;
+		}
+	}
 	
 }

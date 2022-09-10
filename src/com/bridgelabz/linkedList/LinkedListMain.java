@@ -12,9 +12,10 @@ public class LinkedListMain {
 		LinkedList list = new LinkedList();		// created object of LinkedList class
 		
 		list.addEnd(56);
+		list.addEnd(30);
 		list.addEnd(70);
 		
-		list.addMiddle(30);
+		list.deleteFirst();
 		
 		list.display();
 	}
