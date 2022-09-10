@@ -11,9 +11,9 @@ public class LinkedListMain {
 		
 		LinkedList list = new LinkedList();		// created object of LinkedList class
 
-		list.insert(56);
-		list.insert(30);
-		list.insert(70);
+		list.addFirst(70);
+		list.addFirst(30);
+		list.addFirst(56);
 		
 		list.display();
 	}

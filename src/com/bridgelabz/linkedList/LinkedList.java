@@ -50,5 +50,26 @@ public class LinkedList {
 	    	System.out.print("null");
 		}
 	}
+
+	/*
+	 *	method to add data at start of Linked List
+	 */
+	
+	public void addFirst(int data) {
+		
+		Node newNode = new Node(data);		// created object of Node class & initialize with parameter data
+		
+		if (head == null) {
+			
+			head = newNode;
+			tail = newNode;
+			
+		} else {
+			
+			newNode.next = head;
+			head = newNode;
+		}
+		
+	}
 	
 }
