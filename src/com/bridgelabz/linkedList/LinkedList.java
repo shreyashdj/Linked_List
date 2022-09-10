@@ -1,5 +1,7 @@
 package com.bridgelabz.linkedList;
 
+import java.util.Scanner;
+
 /*
  * @author SHREYASH JADHAV
  */
@@ -9,6 +11,26 @@ public class LinkedList {
 	
 	Node head;
 	Node tail;
+	
+	/*
+	 * 	method to print Linked List
+	 */
+	
+	public void display() {
+
+		Node temp = head;
+
+	    if(temp == null) {
+	    	System.out.println("\n LinkedList is empty");
+	    } else {
+	    	System.out.print("\n Linked List : ");
+	    	while (temp != null) {
+	    		System.out.print(temp.data + " -> ");
+	    		temp = temp.next;
+	    	}
+	    	System.out.print("null");
+		}
+	}
 	
 	/*
 	 *	method to add data at start of Linked List
@@ -50,25 +72,37 @@ public class LinkedList {
 		}
 		
 	}
-	
+
 	/*
-	 * 	method to print Linked List
+	 *	method to add data at middle of Linked List
 	 */
-	
-	public void display() {
-
-		Node temp = head;
-
-	    if(temp == null) {
-	    	System.out.println(" LinkedList is empty");
+	public void addMiddle(int data) {
+		
+		Node newNode = new Node(data);		// created object of Node class & initialize with parameter data
+		
+		Node check = head;
+		
+		if(check == null) {
+			
+			head = newNode;
+			tail = newNode;
+	    	
 	    } else {
-	    	System.out.print("\n Linked List : ");
-	    	while (temp != null) {
-	    		System.out.print(temp.data + " -> ");
-	    		temp = temp.next;
+	    	
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("\n Enter data after you want to add new data : ");
+		int previousData = scan.nextInt();
+
+	    	while (check.data != previousData) {
+	    		check = check.next;
 	    	}
-	    	System.out.print("null");
+	    	Node temp;
+	    	temp = check.next;
+	    	check.next = newNode;
+	    	newNode.next = temp;
 		}
+
 	}
 	
 }
