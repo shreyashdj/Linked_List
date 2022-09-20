@@ -11,13 +11,17 @@ public class LinkedListMain {
 		
 		LinkedList list = new LinkedList();		// created object of LinkedList class
 		
+		/*
+		 * 	Adding data 56, 30, 70 at End of Linked List using addEnd method
+		 */
+		
 		list.addEnd(56);
 		list.addEnd(30);
 		list.addEnd(70);
 		
-		list.deleteEnd();
+		list.display();		// printing Linked List using display method
 		
-		list.display();
+		list.search(30);	// searching data 30 in Linked List using search method
 	}
 
 }

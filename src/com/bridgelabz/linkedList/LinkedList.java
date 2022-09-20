@@ -1,6 +1,6 @@
 package com.bridgelabz.linkedList;
 
-import java.util.Scanner;
+import java.util.Scanner;		// imported Scanner class
 
 /*
  * @author SHREYASH JADHAV
@@ -30,6 +30,7 @@ public class LinkedList {
 	    	}
 	    	System.out.print("null");
 		}
+	    System.out.println();
 	}
 	
 	/*
@@ -101,7 +102,9 @@ public class LinkedList {
 	    	temp = check.next;
 	    	check.next = newNode;
 	    	newNode.next = temp;
-		}
+
+	    scan.close();
+	    }
 
 	}
 
@@ -140,6 +143,31 @@ public class LinkedList {
 	    	}
 			tail = temp;
 			tail.next = null;
+		}
+		
+	}
+	
+	/**
+	 * 	method to search element in Linked List
+	 */
+	public void search(int data) {
+		
+		Node check = head;
+		
+		if(check == null) {
+			
+			System.out.println("\n Data not found : " + data + "\n Linked List is Empty");
+	    	
+	    } else {
+
+	    	while (check.data != data && check.next != null) {
+	    		check = check.next;
+	    	}
+	    	if (check.data == data) {
+	    		System.out.println("\n Data found : " + data );
+	    	} else {
+	    		System.out.println("\n Data not Found : " + data);
+	    	}
 		}
 		
 	}
