@@ -166,6 +166,77 @@ public class LinkedList {
 	    		System.out.println("\n Data not Found : " + data);
 	    	}
 		}
+	}
+	
+	/**
+	 * 	method to get size of Linked List
+	 */
+	public void size() {
+		
+		/*
+		 * 	storing head in temp variable
+		 * 	traverse through LinkedList till end
+		 * 	and count size using noOfElements variable
+		 */
+		
+		Node temp = head;
+		int noOfElements = 0;
+		
+		while(temp != null) {
+			
+			temp = temp.next;
+			noOfElements++;
+		}
+		System.out.println("\n Size of Linked List is : " + noOfElements);
+	}
+	
+	
+	/**
+	* 	method to delete element at middle of Linked List
+	*/
+	public void dalete(int data) {
+
+			/*
+			 * 	 (1)   check head is null or not
+			 * 	 (2)   check head contain data & only head is present
+			 * 	 (3)   check head contain data & more than 1 elements
+			 * 	(4.1)  traverse through LinkedList till end or till data get match
+			 * 	(4.2)  if data match remove data
+			 */
+			
+			if(head == null) {		// (1)
+				
+				System.out.println("\n Data not found \n Linked List is Empty");
+		    	
+		    } else if (head.data == data && head.next == null) {	// (2)
+		    	
+		    	head = null;
+		    	tail = null;
+		    	System.out.println("\n Data Removed : " + data);
+		    	
+		    } else if (head.data == data) {		// (3)
+		    	
+		    	head = head.next;
+		    	System.out.println("\n Data Removed : " + data);
+		    	
+		    } else {		// (4)
+		    	
+		    	Node previous = head;		// store head in variable previous
+		    	Node check = head.next;		// store head.next in variable check
+		    	
+		    	while (check.data != data && check.next != null) {		// (4.1)
+		    		previous = check;
+		    		check = check.next;
+		    	}
+		    	if (check.data == data) {		// (4.2)
+
+		    		previous.next = check.next;
+		    		System.out.println("\n Data Removed : " + data);
+		    		
+		    	} else {
+		    		System.out.println("\n Data not Found : " + data);
+		    	}
+			}
 		
 	}
 	

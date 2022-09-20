@@ -14,16 +14,20 @@ public class LinkedListMain {
 		/*
 		 * 	Adding data 56, 30, 70 at End of Linked List using addEnd method
 		 */
-		
+
 		list.addEnd(56);
 		list.addEnd(30);
 		list.addEnd(70);
 		
-		list.display();		// printing Linked List using display method
-		
 		list.addMiddle(40, 30);	// adding data (40) after data (30) in Linked List
 		
 		list.display();		// printing Linked List using display method
+		
+		list.dalete(40);	// delete data (40) from Linked List
+		
+		list.display();		// printing Linked List using display method
+		
+		list.size();		// printing size of Linked List using size method
 	}
 
 }
