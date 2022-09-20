@@ -1,7 +1,5 @@
 package com.bridgelabz.linkedList;
 
-import java.util.Scanner;		// imported Scanner class
-
 /*
  * @author SHREYASH JADHAV
  */
@@ -77,7 +75,7 @@ public class LinkedList {
 	/*
 	 *	method to add data at middle of Linked List
 	 */
-	public void addMiddle(int data) {
+	public void addMiddle(int data, int previousData) {
 		
 		Node newNode = new Node(data);		// created object of Node class & initialize with parameter data
 		
@@ -85,25 +83,24 @@ public class LinkedList {
 		
 		if(check == null) {
 			
-			head = newNode;
-			tail = newNode;
+			System.out.println("\n previousData not Found \n Linked List is Empty");
 	    	
 	    } else {
-	    	
-		Scanner scan = new Scanner(System.in);
-		
-		System.out.print("\n Enter data after you want to add new data : ");
-		int previousData = scan.nextInt();
 
-	    	while (check.data != previousData) {
+	    	while (check.data != previousData && check.next != null) {
 	    		check = check.next;
 	    	}
-	    	Node temp;
-	    	temp = check.next;
-	    	check.next = newNode;
-	    	newNode.next = temp;
-
-	    scan.close();
+	    	
+	    	if (check.data == previousData) {
+	    		
+	    		Node temp;
+		    	temp = check.next;
+		    	check.next = newNode;
+		    	newNode.next = temp;
+		    	
+	    	} else {
+	    		System.out.println("\n previousData not Found");
+	    	}   	
 	    }
 
 	}

@@ -21,7 +21,9 @@ public class LinkedListMain {
 		
 		list.display();		// printing Linked List using display method
 		
-		list.search(30);	// searching data 30 in Linked List using search method
+		list.addMiddle(40, 30);	// adding data (40) after data (30) in Linked List
+		
+		list.display();		// printing Linked List using display method
 	}
 
 }
