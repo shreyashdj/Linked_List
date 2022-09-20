@@ -28,6 +28,15 @@ public class LinkedListMain {
 		list.display();		// printing Linked List using display method
 		
 		list.size();		// printing size of Linked List using size method
+		
+		SortedLinkedList sortedLinkedList = new SortedLinkedList();
+		
+		sortedLinkedList.addSort(56);
+		sortedLinkedList.addSort(30);
+		sortedLinkedList.addSort(40);
+		sortedLinkedList.addSort(70);
+		
+		sortedLinkedList.print();
 	}
 
 }
